@@ -79,7 +79,7 @@ body {
 }
 main {
    margin-left: var(--nav-width);
-   transition: margin .15s ease .15s;
+   transition: margin 0.15s ease 0.15s;
 }
 section {
    --section-accent-secondary: ;
@@ -256,7 +256,7 @@ nav .links a:hover {
    transition: 0.5s ease;
 }
 .sidebar-tog i {
-   transition: .3s ease-out;
+   transition: 0.3s ease-out;
 }
 nav:has(.sidebar-tog:hover),
 nav:hover {
@@ -516,24 +516,24 @@ section#contact {
    align-self: flex-start;
 }
 
-@media only screen and (max-width: 1220px) {
-   main {
-      margin: 0;
-   }
-   nav {
-      left: calc(var(--nav-width) * -1);
-   }
+@media only screen and (max-width: 1200px) {
    .sidebar-tog {
       right: calc(var(--size) * -1);
    }
-}
-
-@media only screen and (max-width: 900px) {
    .portfolio-container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    }
    .feature-card {
       font-size: 1rem;
+   }
+}
+
+@media only screen and (max-width: 1050px) {
+   main {
+      margin: 0;
+   }
+   nav {
+      left: calc(var(--nav-width) * -1);
    }
 }
 
@@ -543,13 +543,13 @@ section#contact {
       padding-block: 2rem;
    }
    .section-title {
-      font-size: .9rem;
+      font-size: 0.9rem;
    }
    .portfolio-container {
       gap: 2rem 1.5rem;
    }
    .portfolio-card {
-      font-size: .9rem;
+      font-size: 0.9rem;
    }
 }
 
@@ -558,7 +558,7 @@ section#contact {
       gap: 2.5rem;
    }
    .section-title {
-      font-size: .85rem;;
+      font-size: 0.85rem;
    }
    .paragraph-container {
       flex-direction: column-reverse;
@@ -582,16 +582,16 @@ section#contact {
       padding-inline: 1.2rem;
    }
    .paragraph-container {
-      font-size: .9rem;
+      font-size: 0.9rem;
    }
    .portfolio-container {
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
    }
    .portfolio-card {
-      font-size: .8rem;
+      font-size: 0.8rem;
    }
    .btn {
-      font-size: .7rem;
+      font-size: 0.7rem;
    }
    body {
       --nav-width: 250px;
