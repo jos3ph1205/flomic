@@ -171,6 +171,7 @@ nav {
    isolation: isolate;
    z-index: 50;
    transition: left 0.3s;
+   border-right: solid 2px var(--clr-f-100);
 }
 nav .logo {
    display: block;
@@ -390,6 +391,9 @@ section#services {
    text-align: center;
 }
 
+/* --------------------------------------------------
+PORTFOLIO SECTION
+-------------------------------------------------- */
 section#portfolio {
    --section-accent-secondary: var(--clr-primary-teal-200);
    --section-accent-tertiary: var(--clr-primary-teal-300);
@@ -445,6 +449,9 @@ section#portfolio {
    transition: 0.1s ease-out;
 }
 
+/* --------------------------------------------------
+CONTACT SECTION
+-------------------------------------------------- */
 section#contact {
    --section-accent-secondary: var(--clr-primary-magenta-200);
    --section-accent-tertiary: var(--clr-primary-magenta-300);
@@ -516,10 +523,55 @@ section#contact {
    align-self: flex-start;
 }
 
+/* --------------------------------------------------
+FOOTER SECTION
+-------------------------------------------------- */
+footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: var(--clr-f-300);
+   font-size: 1.1rem;
+   background-color: var(--clr-base-tertiary);
+}
+.footer-links {
+   background-color: var(--clr-base-secondary);
+   width: 100%;
+   padding: 2.5rem;
+   font-size: 1rem;
+   display: flex;
+   justify-content: center;
+   gap: .5em;
+}
+.footer-links a {
+   text-decoration: none;
+   color: var(--clr-f-100);
+   height: 2.8em;
+   aspect-ratio: 1 / 1;
+   border-radius: .2em;
+   background-color: var(--clr-base-tertiary);
+   border: solid 2px transparent;
+
+   display: grid;
+   place-items: center;
+   transition: .2s ease;
+}
+.footer-links a:hover {
+   background-color: transparent;
+   border-color: var(--clr-base-tertiary);
+}
+footer p {
+   padding: 1.5rem 3rem;
+   text-align: left;
+   font-weight: var(--f-thin);
+   font-size: .9rem;
+   color: var(--clr-f-300);
+   text-align: center;
+}
+
 @media only screen and (max-width: 1200px) {
-   .sidebar-tog {
-      right: calc(var(--size) * -1);
-   }
    .portfolio-container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    }
@@ -529,6 +581,9 @@ section#contact {
 }
 
 @media only screen and (max-width: 1050px) {
+   .sidebar-tog {
+      right: calc(var(--size) * -1);
+   }
    main {
       margin: 0;
    }
